@@ -35,20 +35,28 @@ If you already have a folder with your .tex file on your computer, you need to l
 \begin{enumerate}
 \item Create a new repository on GitHub (click the green button on the Repositories tab on your account)
 \item In terminal, navigate to the directory on your computer where your .tex file is stored
-\item \texttt{git init} to initialize this directory as a git repo (not linked to your GitHub yet)
-\item \texttt{git add .} to add all of the files from the directory to be tracked. See below for how to set up a .gitignore to skip adding some files.
-\item \texttt{git commit -m "[commit message]"} commit the files
-\item \texttt{git remote add origin https://github.com/JuliaWilcots/overleaf-github-example.git} link to your GitHub repo that you created in step 1 (change my name and repo name to yours)
-\item \texttt{git push -u origin master} push the files you added to GitHub
+\item \texttt{git init}\\ to initialize this directory as a git repo (not linked to your GitHub yet)
+\item \texttt{git add .}\\ to add all of the files from the directory to be tracked. See below for how to set up a .gitignore to skip adding some files.
+\item \texttt{git commit -m "[commit message]"}\\ commit the files
+\item \texttt{git remote add origin https://github.com/JuliaWilcots/overleaf-github-example.git}\\ link to your GitHub repo that you created in step 1 (change my name and repo name to yours)
+\item \texttt{git push -u origin master} \\push the files you added to GitHub
 \item Check your GitHub (online) to make sure you see the files there.
 \item In Overleaf, click ``New Project'' > ``Import from GitHub''  > click the repository you want to add.
+\item You are good to go!
 \end{enumerate}
 (* is a regular expression that means ``any number of characters, any characters'', so ``*.aux'' tells git to ignore any files with the .aux extension.)
 
 \subsection{Starting from a directory created on Overleaf}
+\begin{enumerate}
+\item On Overleaf, in your project folder, go to ``Menu'' > ``GitHub'' > ``Create a GitHub Repository'' > Follow the instructions
+\item In your newly created GitHub repo, click ``Clone'' and copy the link to your repo to your clipboard
+\item In terminal, navigate to the parent directory you want to keep your manuscript folder (the new github repo) in.
+\item then type:\\ \texttt{git clone https://github.com/JuliaWilcots/new-repo.git} \\(replace ``new-repo'' with your repo name)
+\item You should be all set!
+\end{enumerate}
 
 \subsection{Starting from a repository on GitHub}
-(I do not recommend starting here)
+Choose one of the two above options and work in one direction first (e.g. add a ``New Project'' on Overleaf) and then go in the other direction.
 
 \subsection{Adding a .gitignore}
 When you typeset a latex doc on your computer, a bunch of accessory files are created. These have extensions like .aux, .gz, .log. You do \emph{not} need to push these to your git repository, so you will want to tell git to \textbf{ignore} them. To do this add a file called ``.gitignore'' to your repository on your computer. To do this: 
