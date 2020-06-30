@@ -31,6 +31,18 @@ You will need:
 \section{Setup}
 After following these instructions, you will have a directory on your computer, GitHub repository, and Overleaf project that all contain the same files.
 \subsection{Starting from a directory on your computer}
+If you already have a folder with your .tex file on your computer, you need to link it to a repository on GitHub.
+\begin{enumerate}
+\item Create a new repository on GitHub (click the green button on the Repositories tab on your account)
+\item In terminal, navigate to the directory on your computer where your .tex file is stored
+\item \texttt{git init} to initialize this directory as a git repo (not linked to your GitHub yet)
+\item \texttt{git add .} to add all of the files from the directory to be tracked. See below for how to set up a .gitignore to skip adding some files.
+\item \texttt{git commit -m "[commit message]"} commit the files
+\item \texttt{git remote add origin https://github.com/JuliaWilcots/overleaf-github-example.git} link to your GitHub repo that you created in step 1 (change my name and repo name to yours)
+\item \texttt{git push -u origin master} push the files you added to GitHub
+\item Check your GitHub (online) to make sure you see the files there.
+\item In Overleaf, click ``New Project'' > ``Import from GitHub''  > click the repository to add.
+\end{enumerate}
 
 \subsection{Starting from a directory created on Overleaf}
 
