@@ -11,12 +11,11 @@
     urlcolor=blue
 }
 
-\title{als-proposal-spring2019}
-\author{jwilcots }
-\date{September 2019}
+\title{Linking GitHub, Overleaf, and a local directory}
+
 
 \begin{document}
-
+\maketitle
 \section{Goals}
 If you'd like to be able to work collaboratively on your manuscript, keep a record of changes that have been made to your manuscript, and work on writing both offline and online, use these instructions to help you work easily on the same version of your document(s) between Overleaf, GitHub, and a \LaTeX~ distribution on your computer.
 
@@ -67,17 +66,36 @@ When you typeset a latex doc on your computer, a bunch of accessory files are cr
 \item \texttt{*.gz} (press enter)
 \item \texttt{*.log} (press enter)
 \item add any other file names that are in your local directory that you don't want on GitHub/Overleaf
-\item press `esc' and then type \texttt{wq} and press enter to exit.
+\item press `esc' and then type \texttt{:wq} and press enter to exit.
 \end{enumerate}
 (* is a regular expression that means ``any number of characters, any characters'', so ``*.aux'' tells git to ignore any files with the .aux extension.)
 
 \section{Workflow}
 \subsection{Computer to GitHub to Overleaf}
 If you have been editing on your local machine (this is great if you have a poor internet connection, if the Overleaf servers are not responding, or if you like your TeX distribution more than Overleaf), follow these instructions to update your GitHub repo and Overleaf folders \textbf{after every time to edit your manuscript}!
+\begin{enumerate}
+\item In terminal, navigate to the (git) directory your manuscript is stored in.
+\item \texttt{git add .}\\to add all files\\or\\ \texttt{git add filename.ext} \\ to add a specific file
+\item \texttt{git commit -m ''commit message''} \\commit changes
+\item \texttt{git push origin master}\\Push to GitHub
+\item Your GitHub repo will now be up to date with local
+\item in Overleaf, in your project, click ``Menu'' > ``Github'' > ``Pull GitHub changes into Overleaf''
+\item That's it!
+\end{enumerate}
 
 \subsection{Overleaf to GitHub to Computer}
 Especially if you are collaborating with co-authors, make sure to push the edits you make in Overleaf to GitHub when you are done. Also, if you will want to work offline later, make sure to complete the process and pull your updated files from GitHub to your computer.
+\begin{enumerate}
+\item In your Overleaf project, go to ``Menu'' >  ``Github'' > ``Pull GitHub changes into Overleaf''
+\item In terminal, navigate to your manuscript's directory
+\item \texttt{git pull}\\get edits from GitHub
+\item Good to go
+\end{enumerate}
 
+\section{Notes}
+At any point, you can type \texttt{git status} to see how up-to-date your local directory is compared to your last commit to GitHub.\\
+
+The setup I've described here only works if you are editing in \textbf{one} location at a time. You cannot easily make changes in Overleaf and on your local machine at the same time. (There are other ways of doing this, with multiple branches in GitHub, but I haven't described those here.)
 
 \end{document}
 
