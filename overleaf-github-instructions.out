@@ -1,0 +1,10 @@
+\BOOKMARK [1][-]{section.1}{Goals}{}% 1
+\BOOKMARK [1][-]{section.2}{Requirements}{}% 2
+\BOOKMARK [1][-]{section.3}{Setup}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Starting from a directory on your computer}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Starting from a directory created on Overleaf}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Starting from a repository on GitHub}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Adding a .gitignore}{section.3}% 7
+\BOOKMARK [1][-]{section.4}{Workflow}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{Computer to GitHub to Overleaf}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{Overleaf to GitHub to Computer}{section.4}% 10

@@ -1,0 +1,62 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\graphicspath{ {./figures/} }
+\usepackage{hyperref} %should be last package installed
+\hypersetup{
+    colorlinks=true,    
+    urlcolor=blue
+}
+
+\title{als-proposal-spring2019}
+\author{jwilcots }
+\date{September 2019}
+
+\begin{document}
+
+\section{Goals}
+If you'd like to be able to work collaboratively on your manuscript, keep a record of changes that have been made to your manuscript, and work on writing both offline and online, use these instructions to help you work easily on the same version of your document(s) between Overleaf, GitHub, and a \LaTeX~ distribution on your computer.
+
+\section{Requirements}
+You will need:
+\begin{itemize}
+\item A GitHub account and \href{https://git-scm.com/book/en/v2/Getting-Started-Installing-Git}{command line git tools}
+\item \href{https://www.overleaf.com/edu/mit}{An Overleaf account} (free from MIT)
+\item A \LaTeX~distribution on your computer (I use \href{https://pages.uoregon.edu/koch/texshop/}{TeXShop}, but there are many)
+\end{itemize}
+
+\section{Setup}
+After following these instructions, you will have a directory on your computer, GitHub repository, and Overleaf project that all contain the same files.
+\subsection{Starting from a directory on your computer}
+
+\subsection{Starting from a directory created on Overleaf}
+
+\subsection{Starting from a repository on GitHub}
+(I do not recommend starting here)
+
+\subsection{Adding a .gitignore}
+When you typeset a latex doc on your computer, a bunch of accessory files are created. These have extensions like .aux, .gz, .log. You do \emph{not} need to push these to your git repository, so you will want to tell git to \textbf{ignore} them. To do this add a file called ``.gitignore'' to your repository on your computer. To do this: 
+\begin{enumerate}
+\item type \texttt{vim .gitignore} into terminal while you are in the right parent directory
+\item type \texttt{i} (to insert into the file you just created)
+\item \texttt{*.aux} (press enter)
+\item \texttt{*.gz} (press enter)
+\item \texttt{*.log} (press enter)
+\item add any other file names that are in your local directory that you don't want on GitHub/Overleaf
+\item press `esc' and then type \texttt{wq} and press enter to exit.
+\end{enumerate}
+(* is a regular expression that means ``any number of characters, any characters'', so ``*.aux'' tells git to ignore any files with the .aux extension.)
+
+\section{Workflow}
+\subsection{Computer to GitHub to Overleaf}
+If you have been editing on your local machine (this is great if you have a poor internet connection, if the Overleaf servers are not responding, or if you like your TeX distribution more than Overleaf), follow these instructions to update your GitHub repo and Overleaf folders \textbf{after every time to edit your manuscript}!
+
+\subsection{Overleaf to GitHub to Computer}
+Especially if you are collaborating with co-authors, make sure to push the edits you make in Overleaf to GitHub when you are done. Also, if you will want to work offline later, make sure to complete the process and pull your updated files from GitHub to your computer.
+
+
+\end{document}
+
